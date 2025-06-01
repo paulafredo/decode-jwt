@@ -6,7 +6,11 @@ import os
 
 app = Flask(__name__)
 
-@app.route('/decode-jwt', methods=['GET'])
+@app.route('/', methods=['GET'])
+def index():
+    return jsonify({"message": "Decode token run" })
+
+@app.route('/decode', methods=['GET'])
 def decode_jwt():
     token = request.args.get('token')
     if not token:
