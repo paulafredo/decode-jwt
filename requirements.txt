@@ -1,0 +1,2 @@
+Flask==2.3.2 # Or your preferred Flask version
+pyjwt==2.8.0 # Or your preferred PyJWT version
