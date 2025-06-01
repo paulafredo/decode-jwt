@@ -1,11 +1,12 @@
-# api/index.py
+# api/app.py
 
 from flask import Flask, request, jsonify
 import jwt
+import os
 
 app = Flask(__name__)
 
-@app.route('/api/decode-jwt', methods=['GET'])
+@app.route('/decode-jwt', methods=['GET'])
 def decode_jwt():
     token = request.args.get('token')
     if not token:
@@ -25,4 +26,8 @@ def decode_jwt():
         return jsonify({"error": "Invalid JWT token"}), 400
 
 # This line is crucial for Vercel to recognize your Flask app
-handler = app
+# handler = app
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=False)
