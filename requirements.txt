@@ -1,3 +1,3 @@
-Flask==2.3.3  # Ou une version stable plus récente, comme 3.x si vous êtes prêt à l'utiliser
-PyJWT==2.8.0  # Ou une version stable plus récente
-Werkzeug==2.3.7 # Vercel fournit souvent la dernière version de Python, assurez-vous que Werkzeug est compatible
+Flask
+PyJWT
+Werkzeug
